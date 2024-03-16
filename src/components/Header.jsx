@@ -11,6 +11,7 @@ import  location from "../assets/location.png";
 
 function Header() {
     return (
+        <>
         <header
             className="pl-8 pt-4 pb-4  bg-[#F7F8F8] sticky top-0 w-full"
         >
@@ -28,7 +29,7 @@ function Header() {
                 />
             </div>
             <div
-                className="hidden   md:flex gap-3 items-center md:ml-20"
+                className="hidden   md:flex gap-10 items-center md:ml-20"
             >
                 <div
                     className=" flex rounded  justify-between  bg-white items-center w-64 border-2 border-gray p-2"
@@ -98,6 +99,20 @@ function Header() {
                 </div>
             </div>
         </header>
+         {/* navigation starts  */}
+    <div className=" text-sm hidden md:flex flex-wrap pl-24 text-center gap-3 pt-2 pb-4 shadow-md">
+        <h1 className="text-[#002f34] pl-4 font-bold">ALL CATAGORIES</h1>
+        <img className="sm: mr-2" src="../assts/Dropdown trigger.svg" alt=""/>
+        <a href="#" className="mr-4 hover:text-blue-600">Mobile Phones</a>
+        <a href="#" className="mr-4 hover:text-blue-600">Cars</a>
+        <a href="#" className="mr-4 hover:text-blue-600">Motorcycles</a>
+        <a href="#" className="mr-4 hover:text-blue-600">Houses</a>
+        <a href="#" className="mr-4 hover:text-blue-600">Video-Audios</a>
+        <a href="#" className="mr-4 hover:text-blue-600">Tablets</a>
+        <a href="#" className="mr-2 hover:text-blue-600">Land & Plots</a>
+    </div>
+     {/* navigation ends  */}
+        </>
     )
 }
 
