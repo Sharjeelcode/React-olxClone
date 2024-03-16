@@ -10,10 +10,10 @@ function Header() {
     return (
         <>
         <header
-            className="pl-8 pt-4 pb-1  bg-[#F7F8F8] sticky top-0 w-full"
+            className="pl-8 pt-4 pb-1  bg-[#F7F8F8] sticky top-0 "
         >
             <div
-                className="nav1 flex justify-center mb-2 md:flex md:ml-20 md:justify-start  w-full"
+                className="nav1 flex justify-center mb-2 md:flex md:ml-20 md:justify-start  "
             >
                 <img
                     className="mr-4 md:mr-12 md:w-16" src={olxlogo} 

@@ -19,81 +19,81 @@ import kids from '../assets/kids.png'
 
 
 function LandingPage() {
-  return (
-    <>
-      {/* Advertisement starts  */}
-    <div className="hidden md:flex flex-col justify-center m-4  ">
-        <img className="w-auto" src={adv1} />
-        <img className="w-auto h-24 self-center mt-8" src={adv2} />
-    </div>
-     {/* Advertisement Ends  */}
+    return (
+        <>
+            {/* Advertisement starts  */}
+            <div className="hidden md:flex flex-col justify-center m-4  ">
+                <img className="w-auto" src={adv1} />
+                <img className="w-auto h-24 self-center mt-8" src={adv2} />
+            </div>
+            {/* Advertisement Ends  */}
 
-     {/* All categories section  starts */}
-    <div className="catagories m-9 text-center md:text-start">
-        <h1 className="text-2xl  font-bold">All categories</h1>
-        <div className="flex  flex-wrap mt-4 justify-center align-middle md:justify-start">
-            <div className="w-20 mb-6 mr-6 flex flex-col items-center md:w-32">
-                <img className="w-24" src={mobile} />
-                <p className="mt-2 font-bold">Mobile</p>
-            </div>
-            <div className="w-20 mb-6 mr-6 flex flex-col items-center md:w-32">
-                <img className="w-24" src={car} />
-                <p className="mt-2 font-bold">Vehicles</p>
-            </div>
-            <div className="w-20 mb-6 mr-6 flex flex-col items-center md:w-32 ">
-                <img className="w-24" src={home} />
-                <p className="mt-2 font-bold text-center">Propert For Sale</p>
-            </div>
-            <div className="w-20 mb-6 text-center mr-6 flex flex-col items-center md:w-32 ">
-                <img className="w-24" src={key} />
-                <p className="mt-2 font-bold">Property For Rent</p>
-            </div>
-            <div className="w-20 mb-6 mr-6 text-center flex flex-col items-center md:w-32 ">
-                <img className="w-24" src={camera} />
-                <p className="mt-2 font-bold">Electronics & Home Appliances</p>
-            </div>
-            <div className="w-20 mb-6 mr-6 flex flex-col items-center md:w-32 ">
-                <img className="w-24" src={bike} />
-                <p className="mt-2 font-bold">Bikes</p>
-            </div>
-            <div className="w-20 mb-6 mr-6 flex flex-col text-center items-center md:w-32 ">
-                <img className="w-24" src={tractor} />
-                <p className="mt-2 font-bold">Business, Industrial & Agriculture</p>
-            </div>
-            <div className="w-20 mb-6 mr-6 flex flex-col text-center items-center  md:w-32">
-                <img className="w-24" src={service} />
-                <p className="mt-2 font-bold">Services</p>
-            </div>
-            <div className="w-20 mb-6 mr-6 flex flex-col text-center items-center md:w-32 ">
-                <img className="w-24" src={jobs} />
-                <p className="mt-2 font-bold">Jobs</p>
-            </div>
-            <div className="w-20 mb-6 mr-6 flex flex-col text-center items-center md:w-32 ">
-                <img className="w-24" src={animals} />
-                <p className="mt-2 font-bold">Animals</p>
-            </div>
-            <div className="w-20 mb-6 mr-6 flex flex-col text-center items-center md:w-32 ">
-                <img className="w-24" src={furniture}  />
-                <p className="mt-2 font-bold">Furniture & Home Decor</p>
-            </div>
-            <div className="w-20 mb-6 mr-6 flex flex-col text-center items-center md:w-32 ">
-                <img className="w-24" src={fashion} />
-                <p className="mt-2 font-bold">Fashion & Beauty</p>
-            </div>
-            <div className="w-20 mb-6 mr-6 flex flex-col text-center items-center md:w-32 ">
-                <img className="w-24" src={books} />
-                <p className="mt-2 font-bold">Books, Sports & Hobbies</p>
-            </div>
-            <div className="w-20 mb-6 mr-6 flex flex-col text-center items-center md:w-32 ">
-                <img className="w-24" src={kids} />
+            {/* All categories section  starts */}
+            <div className="catagories md:ml-20 m-9 text-center md:text-start">
+                <h1 className="text-xl md:ml-6 md:mr-20 text-[#002f34] font-bold">All categories</h1>
+                <div className="flex gap-x-16 gap-y-5 flex-wrap mt-4 justify-center align-middle md:justify-center">
+                    <div className="w-20   flex flex-col items-center md:w-20">
+                        <img className="w-20" src={mobile} />
+                        <p className="mt-2 text-sm font-bold">Mobile</p>
+                    </div>
+                    <div className="w-20   flex flex-col items-center md:w-20">
+                        <img className="w-20" src={car} />
+                        <p className="mt-2 text-sm font-bold">Vehicles</p>
+                    </div>
+                    <div className="w-20  flex flex-col items-center md:w-20 ">
+                        <img className="w-20" src={home} />
+                        <p className="mt-2 text-sm font-bold text-center">Propert For Sale</p>
+                    </div>
+                    <div className="w-20  text-center flex flex-col items-center md:w-20 ">
+                        <img className="w-20" src={key} />
+                        <p className="mt-2 text-sm font-bold">Property For Rent</p>
+                    </div>
+                    <div className="w-20  text-center flex flex-col items-center md:w-20 ">
+                        <img className="w-20" src={camera} />
+                        <p className="mt-2 text-sm font-bold">Electronics & Home Appliances</p>
+                    </div>
+                    <div className="w-20  flex flex-col items-center md:w-20 ">
+                        <img className="w-20" src={bike} />
+                        <p className="mt-2 text-sm font-bold">Bikes</p>
+                    </div>
+                    <div className="w-20  flex flex-col text-center items-center md:w-20 ">
+                        <img className="w-20" src={tractor} />
+                        <p className="mt-2 text-sm font-bold">Business, Industrial & Agriculture</p>
+                    </div>
+                    <div className="w-20  flex flex-col text-center items-center  md:w-20">
+                        <img className="w-20" src={service} />
+                        <p className="mt-2 text-sm font-bold">Services</p>
+                    </div>
+                    <div className="w-20  flex flex-col text-center items-center md:w-20 ">
+                        <img className="w-20" src={jobs} />
+                        <p className="mt-2 text-sm font-bold">Jobs</p>
+                    </div>
+                    <div className="w-20  flex flex-col text-center items-center md:w-20 ">
+                        <img className="w-20" src={animals} />
+                        <p className="mt-2 text-sm font-bold">Animals</p>
+                    </div>
+                    <div className="w-20  flex flex-col text-center items-center md:w-20 ">
+                        <img className="w-20" src={furniture} />
+                        <p className="mt-2 font-bold">Furniture & Home Decor</p>
+                    </div>
+                    <div className="w-20  flex flex-col text-center items-center md:w-20 ">
+                        <img className="w-20" src={fashion} />
+                        <p className="mt-2 text-sm font-bold">Fashion & Beauty</p>
+                    </div>
+                    <div className="w-20  flex flex-col text-center items-center md:w-20 ">
+                        <img className="w-20" src={books} />
+                        <p className="mt-2 text-sm font-bold">Books, Sports & Hobbies</p>
+                    </div>
+                    <div className="w-20  flex flex-col text-center items-center md:w-20 ">
+                        <img className="w-20" src={kids} />
 
-                <p className="mt-2 font-bold">Kids</p>
+                        <p className="mt-2 text-sm font-bold">Kids</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    {/* All categories section  Ends */}
-    </>
-  )
+            {/* All categories section  Ends */}
+        </>
+    )
 }
 
 export default LandingPage
