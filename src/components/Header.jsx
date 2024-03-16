@@ -45,7 +45,7 @@ function Header() {
                     />
                 </div>
                 <div
-                    className="w-96  flex items-center border-2 border-gray rounded"
+                    className="md:w-[40vw]  flex items-center border-2 border-gray rounded"
                 >
                     <input
                         className="w-full p-2 outline-[#23E5DB]"
