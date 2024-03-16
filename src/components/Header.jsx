@@ -6,17 +6,14 @@ import  dropdown from "../assets/Dropdown trigger.svg";
 import  Whiteserachicon from "../assets/white_search.png";
 import  location from "../assets/location.png";
 
-
-
-
 function Header() {
     return (
         <>
         <header
-            className="pl-8 pt-4 pb-4  bg-[#F7F8F8] sticky top-0 w-full"
+            className="pl-8 pt-4 pb-1  bg-[#F7F8F8] sticky top-0 w-full"
         >
             <div
-                className="nav1 flex justify-center mb-4 md:flex md:ml-20 md:justify-start  w-full"
+                className="nav1 flex justify-center mb-2 md:flex md:ml-20 md:justify-start  w-full"
             >
                 <img
                     className="mr-4 md:mr-12 md:w-16" src={olxlogo} 
@@ -100,7 +97,7 @@ function Header() {
             </div>
         </header>
          {/* navigation starts  */}
-    <div className=" text-sm hidden md:flex flex-wrap pl-24 text-center gap-3 pt-2 pb-4 shadow-md">
+    <div className=" text-sm hidden md:flex flex-wrap pl-24 text-center gap-3 pt-2 pb-2 shadow-md">
         <h1 className="text-[#002f34] pl-4 font-bold">ALL CATAGORIES</h1>
         <img className="sm: mr-2" src="../assts/Dropdown trigger.svg" alt=""/>
         <a href="#" className="mr-4 hover:text-blue-600">Mobile Phones</a>
