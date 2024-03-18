@@ -14,12 +14,49 @@ import furniture from '../assets/furniture.png'
 import fashion from '../assets/fashion.png'
 import books from '../assets/books.png'
 import kids from '../assets/kids.png'
-import Ads from './Ads'
+import Ads from '../components/Ads'
+import { useEffect, useState } from 'react'
 
 
 
 
 function LandingPage() {
+const [AdsData ,setAdsData] = useState([])
+
+const AdsCardsData = [
+    {
+        catagory : "fashion",
+        price : "2000",
+        detail :  "Brand new bridal footwears hfdkjhgkjdfghdrfgjkadsasddasasddsa",
+        location : "Saddar ,Karachi",
+        duration : "2 day",
+    },
+    {
+        catagory : "fashion",
+        price : "2780",
+        detail :  "D30 Bluetooth smart watch",
+        location : "I-8/2, Islamabad",
+        duration : "1 day",
+    },
+    {
+        catagory : "fashion",
+        price : "2400",
+        detail :  "women's pu leather plain bag",
+        location : "New Karachi - Sector 5-D, Karachi",
+        duration : "1 day",
+    },
+    {
+        catagory : "fashion",
+        price : "4000",
+        detail :  "football cleats",
+        location : "New Multan, Multan",
+        duration : "6 day",
+    }
+]
+useEffect(()=>{
+    setAdsData(AdsCardsData)
+},[])
+
     return (
         <>
             {/* Advertisement starts  */}
@@ -94,17 +131,31 @@ function LandingPage() {
             </div>
             {/* All categories section  Ends */}
             {/* Main hero section starts */}
-            <div class="hero-section  md:m-8">
-                <div class="fashion justify-center mr-2 ml-2">
-                    <div class="flex w-full justify-between">
-                        <h1 class="font-bold text-lg  md:text-2xl">More in Fashion & Beauty</h1>
-                        <p class="text-blue-500 text-lg flex">View more ></p>
+            <div className="hero-section  md:m-8">
+                <div className="fashion justify-center mr-2 ml-2">
+                    <div className="flex w-full justify-between">
+                        <h1 className="font-bold text-lg  md:text-2xl">More in Fashion & Beauty</h1>
+                        <p className="text-blue-500 text-lg flex">View more ></p>
                     </div>
-                    <div class="flex mb-4 flex-wrap justify-center w-full md:flex-nowrap ">
+                    <div className="flex mb-4 flex-wrap justify-center w-full md:flex-nowrap ">
+                        {
+                            AdsData.map((ads)=>{
+                                if (ads.catagory === 'fashion') {
+                                    return(
+                                        <Ads 
+                                            price = {ads.price} 
+                                            detail = {ads.detail}
+                                            location = {ads.location}
+                                            duration = {ads.duration}
+                                        />
+                                    )
+                                }
+                            })
+                        }
+                        {/* <Ads price={'2000'} location ={"Saddar ,Karachi"} detail = {"Brand new bridal footwear"} duration = {"1 day"} />
                         <Ads />
                         <Ads />
-                        <Ads />
-                        <Ads />
+                        <Ads /> */}
                     </div>
                 </div>
             </div>

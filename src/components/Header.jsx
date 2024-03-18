@@ -5,6 +5,7 @@ import  property from "../assets/property.svg";
 import  dropdown from "../assets/Dropdown trigger.svg";
 import  Whiteserachicon from "../assets/white_search.png";
 import  location from "../assets/location.png";
+import { NavLink } from "react-router-dom";
 
 function Header() {
     return (
@@ -15,9 +16,13 @@ function Header() {
             <div
                 className="nav1 flex justify-center mb-2 md:flex md:ml-20 md:justify-start  "
             >
+                <NavLink
+                    to={''}
+                >
                 <img
                     className="mr-4 md:mr-12 md:w-16" src={olxlogo} 
                 />
+                </NavLink>
                 <img
                     className="mr-4 md:mr-12" src={motors} 
                 />
@@ -70,7 +75,8 @@ function Header() {
                     </h1>
                 </div>
                 <div>
-                    <button
+                    <NavLink
+                    to={'/Form'}
                         title="Sell"
                         className="flex relative items-center justify-center "
                     >
@@ -92,7 +98,7 @@ function Header() {
                             >SELL
                             </span>
                         </div>
-                    </button>
+                    </NavLink>
                 </div>
             </div>
         </header>
