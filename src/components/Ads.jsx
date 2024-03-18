@@ -7,6 +7,7 @@ import bike from '../assets/b1.jpg'
 import house from '../assets/h1.jpg'
 import electronic from '../assets/v1.jpg'
 import tablet from '../assets/t1.jpg'
+import job from '../assets/j4.jpg'
 
 function Ads(props) {
 const {price,detail,location,duration,fashion} = props
@@ -27,8 +28,14 @@ useEffect(()=>{
     if (fashion === "house") {
         setimage(house)
     }
+    if (fashion === "electronic") {
+        setimage(electronic)
+    }
     if (fashion === "tablet") {
         setimage(tablet)
+    }
+    if (fashion === "job") {
+        setimage(job)
     }
 },[fashion])
 

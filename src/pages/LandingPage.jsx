@@ -26,7 +26,6 @@ const [AdsData ,setAdsData] = useState([])
 const AdsCardsData = [
     {
         catagory : "fashion",
-        image :"fashion",
         price : "2000",
         detail :  "Brand new bridal footwears",
         location : "Saddar ,Karachi",
@@ -220,6 +219,34 @@ const AdsCardsData = [
         detail :  "Tabs best variants",
         location : "DHA Defence, Lahore",
         duration : "6 day ago ",
+    },
+    {
+        catagory : "job",
+        price : "15,000",
+        detail :  "call center job",
+        location : "DHA Defence, Lahore",
+        duration : "1 day ago ",
+    },
+    {
+        catagory : "job",
+        price : "5,000",
+        detail :  "Al-Hamd Garden, Lahore",
+        location : "DHA Defence, Lahore",
+        duration : "5 day ago ",
+    },
+    {
+        catagory : "job",
+        price : "20,000",
+        detail :  "Female staff ki zarorat Hy",
+        location : "Johar Town, Lahore",
+        duration : "1 day ago ",
+    },
+    {
+        catagory : "job",
+        price : "3,000",
+        detail :  "Assignment writing work Part Time",
+        location : "Bahria Town Rawalpindi, Rawalpindi",
+        duration : "2 day ago ",
     },
 ]
 useEffect(()=>{
@@ -464,7 +491,7 @@ useEffect(()=>{
                     </div>
                 </div>
                 {/* electronic section ends */}
-                {/* tablet section ends */}
+                {/* tablet section starts */}
                 <div className="fashion justify-center mr-2 ml-2">
                     <div className="flex w-full justify-between">
                         <h1 className="font-bold text-lg text-[#002f34]  md:text-lg">Tablets</h1>
@@ -490,6 +517,34 @@ useEffect(()=>{
                        
                     </div>
                 </div>
+                {/* tablet section ends */}
+                {/* jobs section starts */}
+                <div className="fashion justify-center mr-2 ml-2">
+                    <div className="flex w-full justify-between">
+                        <h1 className="font-bold text-lg text-[#002f34]  md:text-lg">Jobs</h1>
+                        <p className="text-blue-500 text-lg flex">View more ></p>
+                    </div>
+                    <div className="flex mb-4 flex-wrap justify-center w-full md:flex-nowrap ">
+                        {
+                            AdsData.map((ads,index)=>{
+                                if (ads.catagory === 'job') {
+                                    return(
+                                        <Ads 
+                                            key = {index}
+                                            price = {ads.price} 
+                                            detail = {ads.detail}
+                                            location = {ads.location}
+                                            duration = {ads.duration}
+                                            fashion = {ads.catagory}
+                                        />
+                                    )
+                                }
+                            })
+                        }
+                       
+                    </div>
+                </div>
+                {/* jobs section ends */}
                     
             </div>
         </>
