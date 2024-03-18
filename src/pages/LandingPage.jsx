@@ -26,6 +26,7 @@ const [AdsData ,setAdsData] = useState([])
 const AdsCardsData = [
     {
         catagory : "fashion",
+        image :"fashion",
         price : "2000",
         detail :  "Brand new bridal footwears hfdkjhgkjdfghdrfgjkadsasddasasddsa",
         location : "Saddar ,Karachi",
@@ -51,7 +52,35 @@ const AdsCardsData = [
         detail :  "football cleats",
         location : "New Multan, Multan",
         duration : "6 day",
-    }
+    },
+    {
+        catagory : "mobile",
+        price : "33,000",
+        detail :  "Xperia 5 Mark 2 | Single Sim",
+        location : "Saddar ,Karachi",
+        duration : "2 day",
+    },
+    {
+        catagory : "mobile",
+        price : "21,000",
+        detail :  "Samsung Galaxy S10/S10+",
+        location : "Defence ,Karachi",
+        duration : "5 day",
+    },
+    {
+        catagory : "mobile",
+        price : "400,000",
+        detail :  "iphone 14 pro max 256gb",
+        location : "DHA Defence, Lahore",
+        duration : "1 day ago",
+    },
+    {
+        catagory : "mobile",
+        price : "125,000",
+        detail :  "Samsung S21 ULTRA Dual Sim",
+        location : "Satellite Town, Rawalpindi",
+        duration : "3 day ago",
+    },
 ]
 useEffect(()=>{
     setAdsData(AdsCardsData)
@@ -130,34 +159,62 @@ useEffect(()=>{
                 </div>
             </div>
             {/* All categories section  Ends */}
+            
             {/* Main hero section starts */}
             <div className="hero-section  md:m-8">
+                {/* fashion section starts */}
                 <div className="fashion justify-center mr-2 ml-2">
                     <div className="flex w-full justify-between">
-                        <h1 className="font-bold text-lg  md:text-2xl">More in Fashion & Beauty</h1>
+                        <h1 className="font-bold text-lg text-[#002f34] md:text-lg">More in Fashion & Beauty</h1>
                         <p className="text-blue-500 text-lg flex">View more ></p>
                     </div>
                     <div className="flex mb-4 flex-wrap justify-center w-full md:flex-nowrap ">
                         {
-                            AdsData.map((ads)=>{
+                            AdsData.map((ads,index)=>{
                                 if (ads.catagory === 'fashion') {
                                     return(
                                         <Ads 
+                                            key = {index}
                                             price = {ads.price} 
                                             detail = {ads.detail}
                                             location = {ads.location}
                                             duration = {ads.duration}
+                                            fashion = {ads.catagory}
                                         />
                                     )
                                 }
                             })
                         }
-                        {/* <Ads price={'2000'} location ={"Saddar ,Karachi"} detail = {"Brand new bridal footwear"} duration = {"1 day"} />
-                        <Ads />
-                        <Ads />
-                        <Ads /> */}
+                       
                     </div>
                 </div>
+                {/* fashion section ends */}
+                <div className="fashion justify-center mr-2 ml-2">
+                    <div className="flex w-full justify-between">
+                        <h1 className="font-bold text-lg text-[#002f34]  md:text-lg">Mobile Phones</h1>
+                        <p className="text-blue-500 text-lg flex">View more ></p>
+                    </div>
+                    <div className="flex mb-4 flex-wrap justify-center w-full md:flex-nowrap ">
+                        {
+                            AdsData.map((ads,index)=>{
+                                if (ads.catagory === 'mobile') {
+                                    return(
+                                        <Ads 
+                                            key = {index}
+                                            price = {ads.price} 
+                                            detail = {ads.detail}
+                                            location = {ads.location}
+                                            duration = {ads.duration}
+                                            fashion = {ads.catagory}
+                                        />
+                                    )
+                                }
+                            })
+                        }
+                       
+                    </div>
+                </div>
+
             </div>
         </>
     )
