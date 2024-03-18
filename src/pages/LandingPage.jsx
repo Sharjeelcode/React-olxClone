@@ -165,6 +165,62 @@ const AdsCardsData = [
         location : "PIA Housing Scheme, Lahore",
         duration : "5 day ",
     },
+    {
+        catagory : "electronic",
+        price : "8,500",
+        detail :  "c1 model. wakei takei",
+        location : "Hayatabad Phase 5, Peshawar",
+        duration : "2 day ",
+    },
+    {
+        catagory : "electronic",
+        price : "49,999",
+        detail :  "Audio Video Conference Logitech",
+        location : "Shahra-e-Faisal, Karachi",
+        duration : "3 week ",
+    },
+    {
+        catagory : "electronic",
+        price : "36,000",
+        detail :  "43 INCH LED HD STOCK",
+        location : "DHA Phase 2, Lahore",
+        duration : "1 week ",
+    },
+    {
+        catagory : "electronic",
+        price : "25,000",
+        detail :  "LED TV | SMART TV | ANDROID",
+        location : "Others, Hyderabad",
+        duration : "2 week ",
+    },
+    {
+        catagory : "tablet",
+        price : "7,999",
+        detail :  "NEW Tab/ Gaming Tab/ Kids Tab",
+        location : "PCSIR Staff Colony, Lahore",
+        duration : "1 day ",
+    },
+    {
+        catagory : "tablet",
+        price : "23,000",
+        detail :  "MICROSOFT SURFACE PRO 3",
+        location : "Saddar, Karachi",
+        duration : "3 weeks ago ",
+    },
+    {
+        catagory : "tablet",
+        price : "7,499",
+        detail :  "Tab / Kids Tab / Samsung Tab",
+        location : "Main Boulevard Gulberg, Lahore",
+        duration : "1 weeks ago ",
+    },
+    {
+        catagory : "tablet",
+        price : "7,999",
+        detail :  "Tabs best variants",
+        location : "DHA Defence, Lahore",
+        duration : "6 day ago ",
+    },
 ]
 useEffect(()=>{
     setAdsData(AdsCardsData)
@@ -380,8 +436,61 @@ useEffect(()=>{
                        
                     </div>
                 </div>
-
-
+                {/* house section ends */}
+                {/* electronic section added */}
+                <div className="fashion justify-center mr-2 ml-2">
+                    <div className="flex w-full justify-between">
+                        <h1 className="font-bold text-lg text-[#002f34]  md:text-lg">Video-Audio</h1>
+                        <p className="text-blue-500 text-lg flex">View more ></p>
+                    </div>
+                    <div className="flex mb-4 flex-wrap justify-center w-full md:flex-nowrap ">
+                        {
+                            AdsData.map((ads,index)=>{
+                                if (ads.catagory === 'electronic') {
+                                    return(
+                                        <Ads 
+                                            key = {index}
+                                            price = {ads.price} 
+                                            detail = {ads.detail}
+                                            location = {ads.location}
+                                            duration = {ads.duration}
+                                            fashion = {ads.catagory}
+                                        />
+                                    )
+                                }
+                            })
+                        }
+                       
+                    </div>
+                </div>
+                {/* electronic section ends */}
+                {/* tablet section ends */}
+                <div className="fashion justify-center mr-2 ml-2">
+                    <div className="flex w-full justify-between">
+                        <h1 className="font-bold text-lg text-[#002f34]  md:text-lg">Tablets</h1>
+                        <p className="text-blue-500 text-lg flex">View more ></p>
+                    </div>
+                    <div className="flex mb-4 flex-wrap justify-center w-full md:flex-nowrap ">
+                        {
+                            AdsData.map((ads,index)=>{
+                                if (ads.catagory === 'tablet') {
+                                    return(
+                                        <Ads 
+                                            key = {index}
+                                            price = {ads.price} 
+                                            detail = {ads.detail}
+                                            location = {ads.location}
+                                            duration = {ads.duration}
+                                            fashion = {ads.catagory}
+                                        />
+                                    )
+                                }
+                            })
+                        }
+                       
+                    </div>
+                </div>
+                    
             </div>
         </>
     )

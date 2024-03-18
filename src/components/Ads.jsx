@@ -5,6 +5,8 @@ import mobileimage from '../assets/mbile.jpg'
 import car from '../assets/c2.jpg'
 import bike from '../assets/b1.jpg'
 import house from '../assets/h1.jpg'
+import electronic from '../assets/v1.jpg'
+import tablet from '../assets/t1.jpg'
 
 function Ads(props) {
 const {price,detail,location,duration,fashion} = props
@@ -24,6 +26,9 @@ useEffect(()=>{
     }
     if (fashion === "house") {
         setimage(house)
+    }
+    if (fashion === "tablet") {
+        setimage(tablet)
     }
 },[fashion])
 
