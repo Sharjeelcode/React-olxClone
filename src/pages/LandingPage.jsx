@@ -14,6 +14,7 @@ import furniture from '../assets/furniture.png'
 import fashion from '../assets/fashion.png'
 import books from '../assets/books.png'
 import kids from '../assets/kids.png'
+import Ads from './Ads'
 
 
 
@@ -92,6 +93,21 @@ function LandingPage() {
                 </div>
             </div>
             {/* All categories section  Ends */}
+            {/* Main hero section starts */}
+            <div class="hero-section  md:m-8">
+                <div class="fashion justify-center mr-2 ml-2">
+                    <div class="flex w-full justify-between">
+                        <h1 class="font-bold text-lg  md:text-2xl">More in Fashion & Beauty</h1>
+                        <p class="text-blue-500 text-lg flex">View more ></p>
+                    </div>
+                    <div class="flex mb-4 flex-wrap justify-center w-full md:flex-nowrap ">
+                        <Ads />
+                        <Ads />
+                        <Ads />
+                        <Ads />
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
