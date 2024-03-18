@@ -1,9 +1,9 @@
 
 
-function Bike() {
+function Bikes() {
   return (
     <div>Bike</div>
   )
 }
 
-export default Bike
+export default Bikes

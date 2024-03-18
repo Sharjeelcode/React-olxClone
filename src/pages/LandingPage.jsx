@@ -1,9 +1,9 @@
-import adv1 from '../assets/crosal1.jpg'
-import adv2 from '../assets/crosal2.jpg'
-import Ads from '../components/Ads'
+import Ads from '../components/AdvCards'
 import { useEffect, useState } from 'react'
 import Catagories from '../components/Catagories'
 import { NavLink } from 'react-router-dom'
+import Advertisment from '../components/Advertisment'
+import BottomAdv from '../components/BottomAdv'
 
 
 
@@ -244,10 +244,7 @@ useEffect(()=>{
     return (
         <>
             {/* Advertisement starts  */}
-            <div className="hidden md:flex flex-col justify-center m-4  ">
-                <img className="w-auto" src={adv1} />
-                <img className="w-auto h-24 self-center mt-8" src={adv2} />
-            </div>
+            <Advertisment/>            
             {/* Advertisement Ends  */}
 
             {/* All categories section  starts */}
@@ -289,11 +286,11 @@ useEffect(()=>{
                 </div>
                 {/* fashion section ends */}
                 {/* mobile section starts */}
-                <div className="fashion justify-center mr-2 ml-2">
+                <div className="justify-center mr-2 ml-2">
                     <div className="flex w-full justify-between">
                         <h1 className="font-bold text-lg text-[#002f34]  md:text-lg">Mobile Phones</h1>
                         <NavLink
-                        to={'/mobile'} 
+                        to={'/mobiles'} 
                             className="text-blue-500 text-lg flex"
                         >
                             View more >
@@ -321,10 +318,15 @@ useEffect(()=>{
                 </div>
                 {/* mobile section sends */}
                 {/* cars section starts */}
-                <div className="fashion justify-center mr-2 ml-2">
+                <div className="justify-center mr-2 ml-2">
                     <div className="flex w-full justify-between">
                         <h1 className="font-bold text-lg text-[#002f34]  md:text-lg">Cars</h1>
-                        <p className="text-blue-500 text-lg flex">View more ></p>
+                        <NavLink
+                        to={'/cars'}
+                            className="text-blue-500 text-lg flex"
+                        >
+                            View more >
+                        </NavLink>
                     </div>
                     <div className="flex mb-4 flex-wrap justify-center w-full md:flex-nowrap ">
                         {
@@ -348,10 +350,15 @@ useEffect(()=>{
                 </div>
                 {/* car section ends */}
                 {/* bike section starts*/}
-                <div className="fashion justify-center mr-2 ml-2">
+                <div className="justify-center mr-2 ml-2">
                     <div className="flex w-full justify-between">
                         <h1 className="font-bold text-lg text-[#002f34]  md:text-lg">Bikes & Motorcycles</h1>
-                        <p className="text-blue-500 text-lg flex">View more ></p>
+                        <NavLink
+                            to={'/bikes'} 
+                            className="text-blue-500 text-lg flex"
+                        >
+                            View more >
+                        </NavLink>
                     </div>
                     <div className="flex mb-4 flex-wrap justify-center w-full md:flex-nowrap ">
                         {
@@ -375,10 +382,15 @@ useEffect(()=>{
                 </div>
                 {/* bike section ends */}
                 {/* house section start */}
-                <div className="fashion justify-center mr-2 ml-2">
+                <div className="justify-center mr-2 ml-2">
                     <div className="flex w-full justify-between">
                         <h1 className="font-bold text-lg text-[#002f34]  md:text-lg">Houses</h1>
-                        <p className="text-blue-500 text-lg flex">View more ></p>
+                        <NavLink
+                        to={'/houses'} 
+                            className="text-blue-500 text-lg flex"
+                        >
+                            View more >
+                        </NavLink>
                     </div>
                     <div className="flex mb-4 flex-wrap justify-center w-full md:flex-nowrap ">
                         {
@@ -402,10 +414,15 @@ useEffect(()=>{
                 </div>
                 {/* house section ends */}
                 {/* electronic section added */}
-                <div className="fashion justify-center mr-2 ml-2">
+                <div className="justify-center mr-2 ml-2">
                     <div className="flex w-full justify-between">
                         <h1 className="font-bold text-lg text-[#002f34]  md:text-lg">Video-Audio</h1>
-                        <p className="text-blue-500 text-lg flex">View more ></p>
+                        <NavLink
+                        to={'/electronics'} 
+                            className="text-blue-500 text-lg flex"
+                        >
+                            View more >
+                        </NavLink>
                     </div>
                     <div className="flex mb-4 flex-wrap justify-center w-full md:flex-nowrap ">
                         {
@@ -429,10 +446,15 @@ useEffect(()=>{
                 </div>
                 {/* electronic section ends */}
                 {/* tablet section starts */}
-                <div className="fashion justify-center mr-2 ml-2">
+                <div className="justify-center mr-2 ml-2">
                     <div className="flex w-full justify-between">
                         <h1 className="font-bold text-lg text-[#002f34]  md:text-lg">Tablets</h1>
-                        <p className="text-blue-500 text-lg flex">View more ></p>
+                        <NavLink
+                        to={'/tablets'} 
+                            className="text-blue-500 text-lg flex"
+                        >
+                            View more >
+                        </NavLink>
                     </div>
                     <div className="flex mb-4 flex-wrap justify-center w-full md:flex-nowrap ">
                         {
@@ -456,10 +478,15 @@ useEffect(()=>{
                 </div>
                 {/* tablet section ends */}
                 {/* jobs section starts */}
-                <div className="fashion justify-center mr-2 ml-2">
+                <div className="justify-center mr-2 ml-2">
                     <div className="flex w-full justify-between">
                         <h1 className="font-bold text-lg text-[#002f34]  md:text-lg">Jobs</h1>
-                        <p className="text-blue-500 text-lg flex">View more ></p>
+                        <NavLink
+                        to={'/jobs'} 
+                            className="text-blue-500 text-lg flex"
+                        >
+                            View more >
+                        </NavLink>
                     </div>
                     <div className="flex mb-4 flex-wrap justify-center w-full md:flex-nowrap ">
                         {
@@ -482,8 +509,10 @@ useEffect(()=>{
                     </div>
                 </div>
                 {/* jobs section ends */}
+                {/* BottomAdv starts*/}
                     
             </div>
+                <BottomAdv/>
         </>
     )
 }
