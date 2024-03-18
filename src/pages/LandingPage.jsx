@@ -28,7 +28,7 @@ const AdsCardsData = [
         catagory : "fashion",
         image :"fashion",
         price : "2000",
-        detail :  "Brand new bridal footwears hfdkjhgkjdfghdrfgjkadsasddasasddsa",
+        detail :  "Brand new bridal footwears",
         location : "Saddar ,Karachi",
         duration : "2 day",
     },
@@ -72,14 +72,98 @@ const AdsCardsData = [
         price : "400,000",
         detail :  "iphone 14 pro max 256gb",
         location : "DHA Defence, Lahore",
-        duration : "1 day ago",
+        duration : "1 day ",
     },
     {
         catagory : "mobile",
         price : "125,000",
         detail :  "Samsung S21 ULTRA Dual Sim",
         location : "Satellite Town, Rawalpindi",
-        duration : "3 day ago",
+        duration : "3 day ",
+    },
+    {
+        catagory : "car",
+        price : "4,950,000",
+        detail :  "Civic 2018 New Meter New Condition",
+        location : "Bahria Town Karachi",
+        duration : "1 day ",
+    },
+    {
+        catagory : "car",
+        price : "3,695,000",
+        detail :  "Toyota Corolla Xli Converted Gli.",
+        location : "Johar Town, Lahore",
+        duration : "4 day ",
+    },
+    {
+        catagory : "car",
+        price : "3,695,000",
+        detail :  "TOYOTA PRADO TX (2011) MODEL",
+        location : "Bahria Town, Islamabad",
+        duration : "1 week ",
+    },
+    {
+        catagory : "car",
+        price : "23,900,000",
+        detail :  "Toyota Land Cruiser AX 2016",
+        location : "DHA Phase 5, Lahore",
+        duration : "3 week ",
+    },
+    {
+        catagory : "bike",
+        price : "680,000",
+        detail :  "Kawasaki ninja replica 250cc",
+        location : "Bahria Town Karachi",
+        duration : "1 day ",
+    },
+    {
+        catagory : "bike",
+        price : "600,000",
+        detail :  "Electric Heavy Bike",
+        location : "Kot Abdul Malik, Sheikhüpura",
+        duration : "5 day ",
+    },
+    {
+        catagory : "bike",
+        price : "330,000",
+        detail :  "Yamaha 125G YBR Black Color",
+        location : "Saddar, Rawalpindi",
+        duration : "2 day ",
+    },
+    {
+        catagory : "bike",
+        price : "225,000",
+        detail :  "Honda CG 125",
+        location : "Chawinda, Sialkot",
+        duration : "5 day ",
+    },
+    {
+        catagory : "house",
+        price : "42,500,000",
+        detail :  "1 Kanal Double Storey House",
+        location : "West Wood Housing Society, Lahore",
+        duration : "5 day ",
+    },
+    {
+        catagory : "house",
+        price : "24,000,000",
+        detail :  "5 Marla Luxury Bungalow",
+        location : "DHA 9 Town, Lahore",
+        duration : "2 day ",
+    },
+    {
+        catagory : "house",
+        price : "500,00,000",
+        detail :  "Lavish Apartments For Rent",
+        location : "Bahria Town, Lahore",
+        duration : "1 day ",
+    },
+    {
+        catagory : "house",
+        price : "43,500,000",
+        detail :  "10 Marla Beautiful Ultra Design House",
+        location : "PIA Housing Scheme, Lahore",
+        duration : "5 day ",
     },
 ]
 useEffect(()=>{
@@ -189,6 +273,7 @@ useEffect(()=>{
                     </div>
                 </div>
                 {/* fashion section ends */}
+                {/* mobile section starts */}
                 <div className="fashion justify-center mr-2 ml-2">
                     <div className="flex w-full justify-between">
                         <h1 className="font-bold text-lg text-[#002f34]  md:text-lg">Mobile Phones</h1>
@@ -214,6 +299,88 @@ useEffect(()=>{
                        
                     </div>
                 </div>
+                {/* mobile section sends */}
+                {/* cars section starts */}
+                <div className="fashion justify-center mr-2 ml-2">
+                    <div className="flex w-full justify-between">
+                        <h1 className="font-bold text-lg text-[#002f34]  md:text-lg">Cars</h1>
+                        <p className="text-blue-500 text-lg flex">View more ></p>
+                    </div>
+                    <div className="flex mb-4 flex-wrap justify-center w-full md:flex-nowrap ">
+                        {
+                            AdsData.map((ads,index)=>{
+                                if (ads.catagory === 'car') {
+                                    return(
+                                        <Ads 
+                                            key = {index}
+                                            price = {ads.price} 
+                                            detail = {ads.detail}
+                                            location = {ads.location}
+                                            duration = {ads.duration}
+                                            fashion = {ads.catagory}
+                                        />
+                                    )
+                                }
+                            })
+                        }
+                       
+                    </div>
+                </div>
+                {/* car section ends */}
+                {/* bike section starts*/}
+                <div className="fashion justify-center mr-2 ml-2">
+                    <div className="flex w-full justify-between">
+                        <h1 className="font-bold text-lg text-[#002f34]  md:text-lg">Bikes & Motorcycles</h1>
+                        <p className="text-blue-500 text-lg flex">View more ></p>
+                    </div>
+                    <div className="flex mb-4 flex-wrap justify-center w-full md:flex-nowrap ">
+                        {
+                            AdsData.map((ads,index)=>{
+                                if (ads.catagory === 'bike') {
+                                    return(
+                                        <Ads 
+                                            key = {index}
+                                            price = {ads.price} 
+                                            detail = {ads.detail}
+                                            location = {ads.location}
+                                            duration = {ads.duration}
+                                            fashion = {ads.catagory}
+                                        />
+                                    )
+                                }
+                            })
+                        }
+                       
+                    </div>
+                </div>
+                {/* bike section ends */}
+                {/* house section start */}
+                <div className="fashion justify-center mr-2 ml-2">
+                    <div className="flex w-full justify-between">
+                        <h1 className="font-bold text-lg text-[#002f34]  md:text-lg">Houses</h1>
+                        <p className="text-blue-500 text-lg flex">View more ></p>
+                    </div>
+                    <div className="flex mb-4 flex-wrap justify-center w-full md:flex-nowrap ">
+                        {
+                            AdsData.map((ads,index)=>{
+                                if (ads.catagory === 'house') {
+                                    return(
+                                        <Ads 
+                                            key = {index}
+                                            price = {ads.price} 
+                                            detail = {ads.detail}
+                                            location = {ads.location}
+                                            duration = {ads.duration}
+                                            fashion = {ads.catagory}
+                                        />
+                                    )
+                                }
+                            })
+                        }
+                       
+                    </div>
+                </div>
+
 
             </div>
         </>

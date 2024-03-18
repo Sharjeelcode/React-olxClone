@@ -2,6 +2,9 @@ import { useEffect, useState } from "react"
 import like from "../assets/heart.png"
 import fashionimage from "../assets/watch.jpg"
 import mobileimage from '../assets/mbile.jpg'
+import car from '../assets/c2.jpg'
+import bike from '../assets/b1.jpg'
+import house from '../assets/h1.jpg'
 
 function Ads(props) {
 const {price,detail,location,duration,fashion} = props
@@ -12,6 +15,15 @@ useEffect(()=>{
         setimage(fashionimage)
     }if (fashion === "mobile") {
         setimage(mobileimage)
+    }
+    if (fashion === "car") {
+        setimage(car)
+    }
+    if (fashion === "bike") {
+        setimage(bike)
+    }
+    if (fashion === "house") {
+        setimage(house)
     }
 },[fashion])
 
